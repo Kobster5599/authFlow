@@ -14,7 +14,6 @@ import Context from './context';
 
 const Stack = createNativeStackNavigator();
 
-
 export default function App() {
 
   const [ hasProfile, setHasProfile ] = useState(false);
@@ -34,7 +33,6 @@ export default function App() {
         setUserProfile(permaInfo);
       }
     }
-
     restoreProfile();
 
   }, [hasProfile]);
@@ -60,7 +58,6 @@ export default function App() {
   }
 
   const saveUserProfile = (user) => {
-    console.log('In saveUserProfile. The user parameter is:');
     console.log(user);
     setUserProfile(user);
     storeData(user)
