@@ -69,6 +69,10 @@ export default function App() {
     storeData(userProfile);
   }
 
+  const logOut = () => {
+    setHasProfile(false);
+    setUserProfile({});
+  }
   return (
     <Context.Provider value = {{ profile: userProfile, setProfile: saveUserProfile, storeProfile: saveData }}>
       <NavigationContainer>
